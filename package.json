@@ -1,0 +1,27 @@
+{
+  "name": "spirits-node",
+  "version": "1.0.0",
+  "description": "A Node.js REST API for managing and filtering paranormal sighting data.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anuska86/spirits-node.git"
+  },
+  "keywords": [
+    "paranormal",
+    "spirits",
+    "nodejs",
+    "api"
+  ],
+  "author": "Ana Sappia Rey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anuska86/spirits-node/issues"
+  },
+  "homepage": "https://github.com/Anuska86/spirits-node#readme"
+}
