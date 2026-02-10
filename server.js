@@ -2,6 +2,8 @@ import http from "node:http";
 
 const PORT = 8000;
 
+console.log('CWD', process.cwd())
+
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/html");
@@ -10,5 +12,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Connected on port: ${PORT}`);
-  console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Server running at http://localhost:${PORT}/`);
 });
