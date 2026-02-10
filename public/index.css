@@ -26,7 +26,7 @@ body {
 body::before {
   position: absolute;
   content: "";
-  background-image: url("./public/images/background.png");
+  background-image: url("./images/background.png");
   background-size: cover;
   background-position: center 40%;
   top: 0;

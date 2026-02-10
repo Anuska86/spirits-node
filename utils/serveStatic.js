@@ -1,7 +1,31 @@
 import path from "node:path";
+import fs from "node:fs/promises";
 
-export function serveStatic(baseDirectory) {
-  const filePath = path.join(baseDirectory, "public", "index.html");
+import { sendResponse } from "./sendResponse.js";
 
-  console.log("This is the file path:", filePath);
+const MIME_TYPES = {
+  ".html": "text/html",
+  ".js": "application/javascript",
+  ".css": "text/css",
+  ".json": "application/json",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+};
+
+export async function serveStatic(req, res, baseDirectory) {
+  const relativePath = req.url === "/" ? "index.html" : req.url;
+  const filePath = path.join(baseDirectory, "public", relativePath);
+
+  const ext = path.extname(filePath).toLowerCase();
+  const contentType = MIME_TYPES[ext] || "application/octet-stream";
+
+  try {
+    const content = await fs.readFile(filePath);
+    sendResponse(res, 200, contentType, content);
+
+    console.log(`Served: ${relativePath} as ${contentType}`);
+  } catch (error) {
+    console.log("File not found:", relativePath);
+    sendResponse(res, 404, "text/plain", "404 Not Found");
+  }
 }
