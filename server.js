@@ -1,8 +1,11 @@
 import http from "node:http";
+import { serveStatic } from "./utils/serveStatic.js";
 
 const PORT = 8000;
 
-console.log('CWD', process.cwd())
+console.log("CWD", process.cwd());
+
+const __dirname = import.meta.dirname;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -14,3 +17,5 @@ server.listen(PORT, () => {
   console.log(`Connected on port: ${PORT}`);
   console.log(`Server running at http://localhost:${PORT}/`);
 });
+
+serveStatic(__dirname);
