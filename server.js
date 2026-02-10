@@ -8,4 +8,7 @@ const server = http.createServer((req, res) => {
   res.end("<html><h1>The server is working</h1></html>");
 });
 
-server.listen(PORT, () => console.log(`Connected on port: ${PORT}`));
+server.listen(PORT, () => {
+  console.log(`Connected on port: ${PORT}`);
+  console.log(`Server running at http://localhost:${port}/`);
+});
