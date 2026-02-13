@@ -18,10 +18,17 @@ export async function serveStatic(req, res, baseDirectory) {
   try {
     const content = await fs.readFile(filePath);
     sendResponse(res, 200, contentType, content);
-
-    console.log(`Served: ${relativePath} as ${contentType}`);
   } catch (error) {
-    console.log("File not found:", relativePath);
-    sendResponse(res, 404, "text/plain", "404 Not Found");
+    if (error.code === "ENOENT") {
+      const content = await fs.readFile(path.join(publicDirectory, "404.html"));
+      sendResponse(res, 404, "text/html", content);
+    } else {
+      sendResponse(
+        res,
+        500,
+        "text/html",
+        `<html><h1>Server Error: ${error.code}</h1></html>`,
+      );
+    }
   }
 }
