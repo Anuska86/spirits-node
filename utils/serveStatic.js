@@ -2,26 +2,18 @@ import path from "node:path";
 import fs from "node:fs/promises";
 
 import { sendResponse } from "./sendResponse.js";
-
-const MIME_TYPES = {
-  ".html": "text/html",
-  ".js": "application/javascript",
-  ".css": "text/css",
-  ".json": "application/json",
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-};
+import { getContentType } from "./getContentType.js";
 
 export async function serveStatic(req, res, baseDirectory) {
-  const relativePath = req.url === "/" ? "index.html" : req.url;
-  const filePath = path.join(baseDirectory, "public", relativePath);
-
-  console.log(
-    `DEBUG: Browser asked for ${req.url} -> Node is looking at: ${filePath}`,
+  const publicDirectory = path.join(baseDirectory, "public");
+  const filePath = path.join(
+    publicDirectory,
+    req.url === "/" ? "index.html" : req.url,
   );
 
-  const ext = path.extname(filePath).toLowerCase();
-  const contentType = MIME_TYPES[ext] || "application/octet-stream";
+  const extension = path.extensionName(filePath);
+
+  const contentType = getContentType(extension);
 
   try {
     const content = await fs.readFile(filePath);
