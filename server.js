@@ -14,9 +14,7 @@ const server = http.createServer(async (req, res) => {
   if (req.url === "/api") {
     if (req.method === "GET") {
       return await handleGet(req, res);
-    }
-
-    if (req.method === "POST") {
+    } else if (req.method === "POST") {
       return await handlePost(req, res);
     }
   } else if (!req.url.startsWith("/api")) {
