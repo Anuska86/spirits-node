@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  const container = document.querySelector(".cards-container");
+
+  if (!container) {
+    console.log("No cards container found. We must be on the Home page!");
+    return;
+  }
+
   try {
     const data = await fetch("/api");
     const response = await data.json();
@@ -6,14 +13,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     console.log("Error fetching the api data", err);
   }
-});
 
-function renderCards(cardsData) {
-  const container = document.querySelector(".cards-container");
-  let cardsHTML = "";
+  function renderCards(cardsData) {
+    const container = document.querySelector(".cards-container");
+    if (!container) return;
+    let cardsHTML = "";
 
-  cardsData.forEach((card, i) => {
-    cardsHTML += `
+    cardsData.forEach((card, i) => {
+      cardsHTML += `
 <article class="sighting-card" aria-labelledby="sighting-title-${i}">
   <p class="card-details">${card.timeStamp}, ${card.location}</p>
   <h3 id="sighting-title-${i}">${card.title}</h3>
@@ -23,19 +30,20 @@ function renderCards(cardsData) {
   <button class="read-more-btn" aria-expanded="false">Read in full</button>
 </article>
   `;
+    });
+
+    container.innerHTML = cardsHTML;
+  }
+
+  // handle card expand/collapse
+  document.querySelector(".cards-container").addEventListener("click", (e) => {
+    if (!e.target.classList.contains("read-more-btn")) return;
+
+    const button = e.target;
+    const sightingCard = button.closest(".sighting-card");
+    const isExpanded = sightingCard.classList.toggle("expanded");
+
+    button.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    button.textContent = isExpanded ? "Show less" : "Read in full";
   });
-
-  container.innerHTML = cardsHTML;
-}
-
-// handle card expand/collapse
-document.querySelector(".cards-container").addEventListener("click", (e) => {
-  if (!e.target.classList.contains("read-more-btn")) return;
-
-  const button = e.target;
-  const sightingCard = button.closest(".sighting-card");
-  const isExpanded = sightingCard.classList.toggle("expanded");
-
-  button.setAttribute("aria-expanded", isExpanded ? "true" : "false");
-  button.textContent = isExpanded ? "Show less" : "Read in full";
 });
