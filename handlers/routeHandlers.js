@@ -10,3 +10,7 @@ export async function handleGet(req, res) {
 }
 
 // handlePost
+
+export async function handlePost(req, res) {
+  console.log("POST request received");
+}
