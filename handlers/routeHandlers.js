@@ -1,4 +1,13 @@
+import { getData } from "../utils/getData";
+import { sendResponse } from "../utils/sendResponse";
+
 // handleGet
+
+export async function handleGet() {
+  const data = await getData();
+  const content = JSON.stringify(data);
+  sendResponse(res, 200, "application/json", content);
+}
 
 /*
 Challenge:
