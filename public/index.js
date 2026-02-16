@@ -1,10 +1,12 @@
-try {
-  const data = await fetch("/api");
-  const response = await data.json();
-  renderCards(response);
-} catch (err) {
-  console.log(err);
-}
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const data = await fetch("/api");
+    const response = await data.json();
+    renderCards(response);
+  } catch (err) {
+    console.log("Error fetching the api data", err);
+  }
+});
 
 function renderCards(cardsData) {
   const container = document.querySelector(".cards-container");
