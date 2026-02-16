@@ -11,9 +11,9 @@ export async function serveStatic(req, res, baseDirectory) {
     req.url === "/" ? "index.html" : req.url,
   );
 
-  const extension = path.extensionName(filePath);
+  const ext = path.extname(filePath);
 
-  const contentType = getContentType(extension);
+  const contentType = getContentType(ext);
 
   try {
     const content = await fs.readFile(filePath);
