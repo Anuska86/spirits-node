@@ -5,14 +5,15 @@ import { getData } from "./utils/getData.js";
 
 const PORT = 8000;
 
-console.log("CWD", process.cwd());
+//console.log("CWD", process.cwd());
 
 const __dirname = import.meta.dirname;
 
-console.log(await getData());
-
 const server = http.createServer(async (req, res) => {
-  await serveStatic(req, res, __dirname);
+  if (condition) {
+  } else if (!req.url.startsWith("/api")) {
+    return await await serveStatic(req, res, __dirname);
+  }
 });
 
 server.listen(PORT, () => {
