@@ -26,7 +26,7 @@ body {
 body::before {
   position: absolute;
   content: "";
-  background-image: url("./images/background.png");
+  background-image: url("../images/background.png");
   background-size: cover;
   background-position: center 40%;
   top: 0;
@@ -109,7 +109,7 @@ p {
 }
 
 .site-title {
-  font-size: clamp(2rem, 8.333vw, 3.5rem);
+  font-size: clamp(3rem, 8.333vw, 3.5rem);
   font-family: "Frijole", serif;
   color: white;
   text-decoration: none;
@@ -118,7 +118,7 @@ p {
 }
 
 .site-title-page {
-  font-size: clamp(0.7rem, 4.999vw, 1.1rem);
+  font-size: clamp(3rem, 4.999vw, 1.1rem);
   font-family: "Frijole", serif;
   color: white;
   text-decoration: none;
@@ -234,7 +234,7 @@ footer {
 /* ============================== */
 
 .logo-img {
-  width: 6vw;
-  max-width: 40px;
+  width: 95px;
   opacity: 0.7;
+  border-radius: 8px;
 }
