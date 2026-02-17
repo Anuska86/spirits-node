@@ -19,7 +19,7 @@ export async function handlePost(req, res) {
     const parsedBody = await parseJSONBody(req, res);
     const sanitizedBody = sanitizeInput(parsedBody);
     await addNewSighting(sanitizedBody);
-    sendResponse(res, 201, "application/json", JSON.stringify(parsedBody));
+    sendResponse(res, 201, "application/json", JSON.stringify(sanitizedBody));
   } catch (error) {
     sendResponse(
       res,
