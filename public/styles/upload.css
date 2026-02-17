@@ -1,0 +1,167 @@
+/* ============================== */
+/*        FORM STYLING            */
+/* ============================== */
+
+form {
+  margin-top: 1.5em;
+  background-color: #333;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  border-radius: 10px;
+  gap: 0 1em;
+  padding: 2em;
+  display: grid;
+  grid-template-areas:
+    "lt ld ld"
+    "it id id"
+    "lm id id"
+    "im id id"
+    "ll id id"
+    "il id id"
+    "sb sb sb"
+    "fm fm fm";
+}
+
+@media (max-width: 650px) {
+  main.form-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  form {
+    grid-template-areas:
+      "lt"
+      "it"
+      "lm"
+      "im"
+      "ll"
+      "il"
+      "ld"
+      "id"
+      "sb"
+      "fm";
+  }
+}
+
+.form-title {
+  grid-area: ft;
+}
+
+.lab-title {
+  grid-area: lt;
+}
+
+.input-title {
+  grid-area: it;
+}
+
+.lab-details {
+  grid-area: ld;
+}
+
+.input-details {
+  grid-area: id;
+}
+
+.lab-date-time {
+  grid-area: lm;
+}
+
+.input-date-time {
+  grid-area: im;
+}
+
+.lab-location {
+  grid-area: ll;
+}
+
+.input-location {
+  grid-area: il;
+}
+
+.submit-btn {
+  grid-area: sb;
+}
+
+.form-message {
+  grid-area: fm;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder,
+input[type="datetime-local"] {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+input {
+  height: 50px;
+  border: none;
+}
+
+textarea,
+input {
+  border-radius: 5px;
+}
+
+input,
+textarea,
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  padding-bottom: 10px;
+  line-height: 1.4;
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: 1em;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+  font-family: "Frijole", serif;
+  background-color: #333;
+}
+
+.submit-btn:hover {
+  background-color: white;
+  color: #222;
+}
+
+.submit-btn:focus {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+  background-color: white;
+  color: #222;
+}
+
+.submit-btn:active {
+  background-color: #222;
+  color: white;
+  outline: 3px solid yellow;
+  outline-offset: 2px;
+}
+
+.form-message p {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 1.5em;
+  text-align: center;
+}

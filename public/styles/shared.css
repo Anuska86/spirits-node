@@ -39,6 +39,26 @@ body::before {
 }
 
 /* ============================== */
+/*           MAIN CONTENT         */
+/* ============================== */
+
+main {
+  display: flex;
+  margin: 0 4em;
+  justify-content: center;
+}
+
+main.sightings {
+  flex-direction: column;
+  align-items: center;
+}
+
+main.form-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================== */
 /*            TYPOGRAPHY          */
 /* ============================== */
 
