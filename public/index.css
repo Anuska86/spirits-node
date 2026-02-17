@@ -240,13 +240,12 @@ main.form-container {
 }
 
 .cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   padding: 0 1em;
-  margin: 2em 0;
+  margin: 2em auto;
+  max-width: 800px;
 }
 
 /* ============================== */
@@ -426,8 +425,6 @@ textarea {
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 4px 60px rgba(0, 0, 0, 0.1);
-  min-width: 320px;
-  max-width: 350px;
   min-height: 250px;
   padding: 1.4rem;
   overflow: hidden;
