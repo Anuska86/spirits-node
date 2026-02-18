@@ -42,10 +42,14 @@ body::before {
 /*           MAIN CONTENT         */
 /* ============================== */
 
+/* ============================== */
+/*           HEADER         */
+/* ============================== */
+
 main {
   display: flex;
-  margin: 0 4em;
   justify-content: center;
+  margin: 0;
 }
 
 main.sightings {
