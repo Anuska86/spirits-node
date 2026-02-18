@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* ============================== */
 /*             BODY               */
 /* ============================== */
@@ -20,6 +25,8 @@ body {
   background-color: #333;
   color: #f9f9f9;
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Background Image Overlay */
