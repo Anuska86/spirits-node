@@ -7,8 +7,8 @@
       name="description"
       content="The Spirits Node - recording paranormal sightings"
     />
-    <link rel="stylesheet" href="./styles/shared.css" />
-    <link rel="stylesheet" href="./styles/upload.css" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/upload.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,6 +45,7 @@
           name="title"
           placeholder="A ghostly encounter"
           class="input-title"
+          required
         />
 
         <!-- Textarea Field -->
@@ -55,6 +56,7 @@
           rows="5"
           placeholder="I was trying to get to sleep when..."
           class="input-details"
+          required
         ></textarea>
         <!-- Time/Date Field -->
         <label for="datetime" class="lab-date-time">Time/Date:</label>
@@ -63,6 +65,7 @@
           id="datetime"
           name="datetime"
           class="input-date-time"
+          required
         />
         <!-- Location Field -->
         <label for="location" class="lab-location">Location:</label>
@@ -72,6 +75,7 @@
           name="location"
           placeholder="London, UK"
           class="input-location"
+          required
         />
 
         <!-- Submit Button -->
@@ -79,16 +83,17 @@
         <div class="form-message">
           <p class="form-message-text">
             All sightings will be published on our
-            <a href="./sightings.html">sightings</a> page.
+            <a href="/sightings.html">sightings</a> page.
           </p>
         </div>
+        <div id="response-message" aria-live="polite"></div>
       </form>
     </main>
 
     <footer>
       <p>&copy; The Spirits Node. All rights reserved.</p>
-      <p><a href="./news.html">Check out our news feed!</a> (beta)</p>
+      <p><a href="/news.html">Check out our news feed!</a> (beta)</p>
     </footer>
-    <script type="module" src="upload-sighting.js"></script>
+    <script type="module" src="/upload-sighting.js"></script>
   </body>
 </html>
