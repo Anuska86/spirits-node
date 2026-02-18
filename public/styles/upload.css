@@ -11,7 +11,6 @@ form {
   font-size: clamp(1rem, 6vw, 2.5rem);
   border-radius: 10px;
   gap: 0 1em;
-  margin-top: 0;
   padding: 2em;
   display: grid;
   grid-template-areas:

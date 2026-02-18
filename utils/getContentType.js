@@ -8,6 +8,7 @@ export function getContentType(ext) {
     ".jpeg": "image/jpeg",
     ".gif": "image/gif",
     ".svg": "image/svg+xml",
+    ".mp3": "audio/mpeg",
   };
 
   return types[ext.toLowerCase()] || "text/html";

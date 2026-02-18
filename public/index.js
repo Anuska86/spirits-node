@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  //audio logic
+
+  const audio = document.getElementById("x-files-audio");
+  const musicBtn = document.getElementById("music-toggle");
+
+  if (musicBtn && audio) {
+    musicBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        musicBtn.textContent = "🔊 Mute Theme";
+        musicBtn.classList.add("playing");
+      } else {
+        audio.pause();
+        musicBtn.textContent = "🔈 Play Atmosphere";
+        musicBtn.classList.remove("playing");
+      }
+    });
+  }
+
+  //sightings logic
+
   const container = document.querySelector(".cards-container");
 
   if (!container) {
