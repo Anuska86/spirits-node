@@ -235,11 +235,15 @@ nav ul {
 
 .site-header {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2em;
-  padding: 1.5em;
+  gap: 2rem;
+  padding: 1.5em 1em;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .top-header {

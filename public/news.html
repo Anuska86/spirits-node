@@ -5,33 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="From the Other Side - recording paranormal sightings"
+      content="The Spirits Node - recording paranormal sightings"
     />
-    <link rel="stylesheet" href="./styles/shared.css" />
-    <link rel="stylesheet" href="./styles/news.css" />
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/news.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Frijole&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>From the Other Side: Live Feed</title>
+    <title>The Spirits Node: Live Feed</title>
   </head>
 
   <body>
     <header>
       <div class="top-header">
-        <img class="logo-img" src="./images/logo.png" alt="site logo" />
+        <img class="logo-img" src=/images/logo.png" alt="site logo" />
         <nav id="main-navigation">
           <ul role="list">
             <li role="listitem"><a href="/">Home</a></li>
-            <li role="listitem"><a href="./sightings.html">Read</a></li>
-            <li role="listitem"><a href="./upload-sighting.html">Upload</a></li>
+            <li role="listitem"><a href="/sightings.html">Read</a></li>
+            <li role="listitem"><a href="/upload-sighting.html">Upload</a></li>
           </ul>
         </nav>
       </div>
       <div class="site-header">
-        <a href="/" class="site-title-page">From the Other Side</a>
+        <a href="/" class="site-title-page">The Spirits Node</a>
+        <audio id="x-files-audio" loop>
+          <source src="/audio/x-files-theme.mp3" type="audio/mpeg" />
+        </audio>
+
+       
+          <button id="music-toggle" class="music-btn">
+            🔈 Play Atmosphere
+          </button>
+      
       </div>
     </header>
 
@@ -41,9 +50,9 @@
     </main>
 
     <footer>
-      <p>&copy; From The Other Side. All rights reserved.</p>
+      <p>&copy; The Spirits Node. All rights reserved.</p>
       <p><a href="/news.html">Check out our news feed!</a> (beta)</p>
     </footer>
-    <script type="module" src="./news.js"></script>
+    <script type="module" src="/news.js"></script>
   </body>
 </html>
