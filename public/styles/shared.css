@@ -11,6 +11,8 @@
 html {
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* ============================== */
@@ -27,6 +29,8 @@ body {
   min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Background Image Overlay */
@@ -222,6 +226,7 @@ nav a:active {
 nav ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* ============================== */
@@ -230,6 +235,7 @@ nav ul {
 
 .site-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2em;
@@ -240,8 +246,10 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
-  padding: 1em 2em;
+  gap: 1em;
+  padding: 1em;
+  width: 100%;
+  max-width: 100vw;
 }
 
 footer {
