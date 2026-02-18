@@ -55,11 +55,13 @@ main {
 main.sightings {
   flex-direction: column;
   align-items: center;
+  padding-top: 0;
 }
 
 main.form-container {
   flex-direction: column;
   align-items: center;
+  padding-top: 0;
 }
 
 /* ============================== */
@@ -113,7 +115,7 @@ p {
 }
 
 .site-title {
-  font-size: clamp(3rem, 8.333vw, 3.5rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-family: "Frijole", serif;
   color: white;
   text-decoration: none;
@@ -122,12 +124,12 @@ p {
 }
 
 .site-title-page {
-  font-size: clamp(3rem, 4.999vw, 1.1rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-family: "Frijole", serif;
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: 0 0 1em 0;
+  margin: 0;
 }
 
 .site-title:hover,
@@ -148,7 +150,7 @@ p {
 }
 
 .page-title {
-  font-size: clamp(1rem, 6.333vw, 2.5rem);
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-family: "Frijole", serif;
   color: white;
   text-decoration: none;
@@ -157,7 +159,7 @@ p {
 }
 
 .hero-title {
-  font-size: clamp(1rem, 5.333vw, 2.5rem);
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
   text-align: center;
   font-weight: 200;
   max-width: 500px;
@@ -216,7 +218,7 @@ nav ul {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  padding: 1.5em 1.5em 0 1.5em;
+  padding: 1.5em;
 }
 
 .top-header {
@@ -224,7 +226,7 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   gap: 2em;
-  padding: 1em 1em 0 2em;
+  padding: 1em 2em;
 }
 
 footer {

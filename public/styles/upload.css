@@ -8,8 +8,10 @@ form {
   width: 100%;
   max-width: 800px;
   text-align: left;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
   border-radius: 10px;
   gap: 0 1em;
+  margin-top: 0;
   padding: 2em;
   display: grid;
   grid-template-areas:

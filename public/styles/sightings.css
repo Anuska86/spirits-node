@@ -7,7 +7,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 0 1em;
-  margin: 0 auto 2em auto;
+  margin: 10px auto 2em auto;
   max-width: 800px;
 }
 
