@@ -32,3 +32,13 @@ export async function handlePost(req, res) {
     );
   }
 }
+
+// handleNews
+
+export async function handleNews(req, res) {
+  res.statusCode = 200;
+
+  setInterval(() => {
+    let randomIndex = Math.floor(Math.random() * stories.length);
+  }, 3000);
+}
