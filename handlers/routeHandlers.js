@@ -21,16 +21,18 @@ export async function handlePost(req, res) {
   try {
     const parsedBody = await parseJSONBody(req, res);
     const sanitizedBody = sanitizeInput(parsedBody);
-    await addNewSighting(sanitizedBody);
-    sightingEvents.emit("sighting-added", sanitizedBody);
 
-    sendResponse(res, 201, "application/json", JSON.stringify(sanitizedBody));
+    const savedSighting = await addNewSighting(sanitizedBody);
+
+    sightingEvents.emit("sighting-added", savedSighting);
+
+    sendResponse(res, 201, "application/json", JSON.stringify(savedSighting));
   } catch (error) {
     sendResponse(
       res,
       400,
       "application/json",
-      JSON.stringify({ error: error }),
+      JSON.stringify({ error: error.message }),
     );
   }
 }
