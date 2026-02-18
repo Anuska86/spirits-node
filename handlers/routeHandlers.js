@@ -55,5 +55,5 @@ export async function handleNews(req, res) {
       })}\n\n`,
     );
     console.log(res);
-  }, 5000);
+  }, 3000);
 }
