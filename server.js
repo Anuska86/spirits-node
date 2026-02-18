@@ -10,6 +10,7 @@ const PORT = 8000;
 const __dirname = import.meta.dirname;
 
 const server = http.createServer(async (req, res) => {
+  console.log(req.url)
   if (req.url === "/api") {
     if (req.method === "GET") {
       return await handleGet(req, res);
