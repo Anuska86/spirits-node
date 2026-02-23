@@ -13,9 +13,12 @@
 
 .sighting-card {
   position: relative;
-  background: #fff;
-  border-radius: 3px;
+  color: #e0e0e0;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
   box-shadow: 0 4px 60px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.3);
   min-height: 250px;
   padding: 1.4rem;
   overflow: hidden;
@@ -25,9 +28,10 @@
 
 .sighting-card h3 {
   font-size: 1.2rem;
-  color: #333;
+  color: #00bfff;
   font-family: "Poppins", sans-serif;
-  margin: 0.2em 0;
+  text-shadow: 0 0 5px rgba(0, 191, 255, 0.2);
+  margin-bottom: 0.5rem;
 }
 
 .sighting-card p {
@@ -35,8 +39,8 @@
 }
 
 .card-details {
-  font-size: 0.8rem;
-  color: #666;
+  font-weight: 500;
+  color: #aaa !important;
   margin: 0;
 }
 
@@ -48,10 +52,6 @@
 }
 
 .sighting-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  line-clamp: 5;
-  -webkit-box-orient: vertical;
   overflow: hidden;
   position: relative;
   text-overflow: clip;
@@ -64,7 +64,7 @@
   left: 0;
   width: 100%;
   height: 1.6em;
-  background: linear-gradient(to bottom, transparent, #fff);
+  background: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 1));
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
@@ -92,7 +92,7 @@
 .read-more-btn {
   background: none;
   border: none;
-  color: #222;
+  color: #aaa;
   padding: 0 0.5em;
   font: inherit;
   cursor: pointer;
