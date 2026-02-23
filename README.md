@@ -10,22 +10,22 @@ A full-stack, atmospheric web application for recording and exploring paranormal
   <summary>Click to view screenshots of the portal</summary>
   
  ### Home Page
-  ![Home Page](screenshots/home.png)
+  ![Home Page](public/screenshots/home.png)
   
   ### Sightings (Read)
-  ![Sightings Feed](screenshots/read.png)
+  ![Sightings Feed](public/screenshots/read.png)
 
 ### Upload Sighting
 
-![Upload Form](screenshots/upload.png)
+![Upload Form](public/screenshots/upload.png)
 
 ### Spooky News Feed
 
-![News Feed](screenshots/news.png)
+![News Feed](public/screenshots/news.png)
 
 ### Ghosted (Custom 404)
 
-![404 Error Page](screenshots/error.png)
+![404 Error Page](public/screenshots/error.png)
 
   </details>
 
