@@ -35,7 +35,7 @@
 }
 
 .sighting-card p {
-  color: #555;
+  color: #a98b8b;
 }
 
 .card-details {
@@ -96,7 +96,7 @@
   padding: 0 0.5em;
   font: inherit;
   cursor: pointer;
-  margin-top: 1em;
+  margin-top: 2em;
   align-self: flex-end;
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
