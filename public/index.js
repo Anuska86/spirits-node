@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const container = document.querySelector(".cards-container");
 
   if (!container) {
-    console.log("No cards container found. We must be on the Home page!");
     return;
   }
 
