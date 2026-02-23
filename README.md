@@ -1,28 +1,29 @@
 # spirits-node
 
 👻 The Spirits Node
+
 A full-stack, atmospheric web application for recording and exploring paranormal sightings. Built with a "Modern-Occult" aesthetic, this project focuses on high-performance asset delivery and immersive user experience.
 
 📸 Project Gallery
 
 <details>
-  <summary>Click to view screenshots</summary>
+  <summary>Click to view screenshots of the portal</summary>
   
-  ### Home
-  ![Home](screenshots/home.png)
+ ### Home Page
+  ![Home Page](screenshots/home.png)
   
-  ### Sightings
+  ### Sightings (Read)
   ![Sightings Feed](screenshots/read.png)
 
-    ### Upload your sighting
+### Upload Sighting
 
 ![Upload Form](screenshots/upload.png)
 
-### Spooky news
+### Spooky News Feed
 
 ![News Feed](screenshots/news.png)
 
-### Gosthed
+### Ghosted (Custom 404)
 
 ![404 Error Page](screenshots/error.png)
 
@@ -96,10 +97,12 @@ Frontend: Modern Spooky UI:
 
 This project is licensed under the MIT License.
 
-🕸️ Connect with the Developer:
+## 🌐 Deployment & Contact
 
-Ana Sappia Rey - Frontend Developer
+| Live Demo | Source Code | Professional Profile |
+
+Developed by Ana Sappia Rey
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ana-sappia-rey/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Anuska86)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Anuska86) LINK TO VERCEL HERE
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://spirits-node.vercel.app/)
