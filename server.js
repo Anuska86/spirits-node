@@ -5,7 +5,7 @@ import fs from "node:fs/promises";
 import { serveStatic } from "./utils/serveStatic.js";
 import { handleGet, handlePost, handleNews } from "./handlers/routeHandlers.js";
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 //console.log("CWD", process.cwd());
 
